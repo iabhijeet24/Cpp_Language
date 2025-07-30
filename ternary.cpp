@@ -11,5 +11,5 @@ int main() {
     cin >> b;
 
     largest = (a>b) ? a : b;
-    cout << a << " is largest." << endl;
+    cout << largest << " is largest." << endl;
 }
