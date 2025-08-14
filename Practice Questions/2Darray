@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[2][2];
+
+    // Step 1: Input elements
+    cout << "Enter 4 elements for a 2x2 matrix:\n";
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            cin >> arr[i][j];
+        }
+    }
+
+    // Step 2: Display the matrix
+    cout << "\nOriginal Matrix:\n";
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+
+    // Step 3: Calculate sum of all elements
+    int totalSum = 0;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            totalSum += arr[i][j];
+        }
+    }
+    cout << "\nSum of all elements: " << totalSum << endl;
+
+    // Step 4: Sum of each row
+    for (int i = 0; i < 2; i++) {
+        int rowSum = 0;
+        for (int j = 0; j < 2; j++) {
+            rowSum += arr[i][j];
+        }
+        cout << "Sum of row " << i + 1 << ": " << rowSum << endl;
+    }
+
+    // Step 5: Sum of each column
+    for (int j = 0; j < 2; j++) {
+        int colSum = 0;
+        for (int i = 0; i < 2; i++) {
+            colSum += arr[i][j];
+        }
+        cout << "Sum of column " << j + 1 << ": " << colSum << endl;
+    }
+
+    // Step 6: Update elements > 10
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            if (arr[i][j] > 10) {
+                arr[i][j] -= 3;
+            }
+        }
+    }
+
+    // Step 7: Display updated matrix
+    cout << "\nUpdated Matrix:\n";
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++) {
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
